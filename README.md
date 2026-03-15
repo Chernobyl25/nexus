@@ -99,7 +99,7 @@ git clone https://github.com/Chernobyl25/nexus.git
 ### 2️⃣ Entrar a la carpeta del proyecto
 
 ```bash
-cd NexusGames
+cd nexus
 ```
 
 ---
