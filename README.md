@@ -74,13 +74,13 @@ Esto facilita una **búsqueda rápida y eficiente dentro del catálogo**.
 
 ### Sección de juegos
 
-<img src="media/screenshots/juegos.png" width="800">
+<img src="media/screenshots/juego.png" width="800">
 
 ---
 
 ### Filtro de videojuegos
 
-<img src="media/screenshots/filtro.png" width="800">
+<img src="media/screenshots/filtros.png" width="800">
 
 ---
 
