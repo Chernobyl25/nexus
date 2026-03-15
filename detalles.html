@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JUEGOS — Detalles</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="page-detalles">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">⬡ NEXUS<span>GAMES</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#catalogo">Catálogo</a></li>
+      <li><a href="index.html#video">Trailer</a></li>
+      <li><a href="detalles.html" class="active">Detalles</a></li>
+    </ul>
+    <button class="nav-cta">Explorar</button>
+  </nav>
+
+  <!-- DETAIL HERO -->
+  <section class="detail-hero" id="detail-hero">
+    <div class="detail-hero-bg">
+      <img id="detail-banner" src="media/juegos/cod.jpg" alt="Game Banner" />
+      <div class="hero-overlay thick"></div>
+    </div>
+    <div class="detail-hero-content">
+      <a href="index.html" class="back-btn">← Volver al catálogo</a>
+      <span class="hero-label" id="detail-genre">Acción / FPS</span>
+      <h1 class="hero-title" id="detail-title">CALL OF DUTY</h1>
+      <div class="detail-meta">
+        <span class="meta-item" id="detail-year">📅 2023</span>
+        <span class="meta-item" id="detail-platform">🎮 PC / PS5 / Xbox</span>
+        <span class="meta-item" id="detail-rating">⭐ 9.2 / 10</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL CONTENT -->
+  <section class="detail-body">
+    <div class="detail-grid">
+
+      <div class="detail-main">
+        <h2>Descripción</h2>
+        <p id="detail-desc">
+          Call of Duty es la saga de shooters en primera persona más vendida de la historia. 
+          Con gráficos de última generación, mapas diseñados para el combate táctico y un 
+          multijugador que ha redefinido el género, cada entrega supera a la anterior. 
+          Enfréntate a enemigos de todo el mundo en modos de juego que van desde el battle 
+          royale hasta el cooperativo de zombies.
+        </p>
+
+        <h2>Características</h2>
+        <ul class="feature-list" id="detail-features">
+          <li>🔫 Multijugador en línea para 100+ jugadores</li>
+          <li>🧟 Modo Zombies cooperativo</li>
+          <li>🗺️ +20 mapas disponibles al lanzamiento</li>
+          <li>⚙️ Sistema de personalización de armas profundo</li>
+          <li>🏆 Temporadas de contenido gratuito</li>
+        </ul>
+      </div>
+
+      <aside class="detail-sidebar">
+        <div class="sidebar-card">
+          <img id="sidebar-img" src="media/juegos/cod.jpg" alt="Game Cover" class="sidebar-cover"/>
+          <div class="sidebar-info">
+            <div class="info-row">
+              <span>Desarrollador</span>
+              <strong id="detail-dev">Activision</strong>
+            </div>
+            <div class="info-row">
+              <span>Género</span>
+              <strong id="detail-genre2">FPS / Acción</strong>
+            </div>
+            <div class="info-row">
+              <span>Año</span>
+              <strong id="detail-year2">2023</strong>
+            </div>
+            <div class="info-row">
+              <span>Plataformas</span>
+              <strong>PC · PS5 · Xbox</strong>
+            </div>
+          </div>
+          <a href="#" class="btn-primary full">Jugar ahora</a>
+
+          <!-- Other games -->
+          <div class="also-like">
+            <h4>También te puede gustar</h4>
+            <a href="detalles.html?game=cyberpunk" class="mini-card">
+              <img src="media/juegos/cyberpunk.jpg" alt="Cyberpunk"/>
+              <span>Cyberpunk 2077</span>
+            </a>
+            <a href="detalles.html?game=minecraft" class="mini-card">
+              <img src="media/juegos/minecraft.jpg" alt="Minecraft"/>
+              <span>Minecraft</span>
+            </a>
+            <a href="detalles.html?game=cod" class="mini-card">
+              <img src="media/juegos/cod.jpg" alt="CoD"/>
+              <span>Call of Duty</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">⬡ NEXUS<span>GAMES</span></div>
+      <p>© 2025 NexusGames — Todos los derechos reservados</p>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="detalles.html">Detalles</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

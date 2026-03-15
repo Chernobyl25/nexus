@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JUEGOS — Catálogo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">⬡ NEXUS<span>GAMES</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="destacados.html">Destacados</a></li>
+      <li><a href="detalles.html">Detalles</a></li>
+    </ul>
+    <button class="cart-icon" id="cartToggle">🛒 <span class="cart-count" id="cartCount">0</span></button>
+    <button class="nav-cta">Explorar</button>
+  </nav>
+
+  <!-- CARRITO -->
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>🛒 MI CARRITO</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"><p class="cart-empty">Tu carrito está vacío.</p></div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total"><span>TOTAL</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="btn-primary full cart-checkout">Finalizar compra</button>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="media/juegos/banner.jpg" alt="Banner" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label">// CATÁLOGO 2025</p>
+      <h1 class="hero-title">DOMINA<br/><span>EL JUEGO</span></h1>
+      <p class="hero-sub">Los mejores títulos en un solo lugar. Acción, aventura y más.</p>
+      <div class="hero-btns">
+        <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+        <a href="#video" class="btn-ghost">▶ Ver Trailer</a>
+      </div>
+    </div>
+    <div class="hero-scroll">SCROLL ↓</div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section class="catalogo" id="catalogo">
+    <div class="section-header">
+      <span class="section-tag">// BIBLIOTECA</span>
+      <h2>CATÁLOGO DE <span>JUEGOS</span></h2>
+      <p>Descubre los títulos más destacados de la temporada</p>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="filter-bar" id="filterBar">
+
+      <div class="filter-group">
+        <button class="filter-toggle" data-target="dropGenero">🎮 Género <span class="filter-arrow">▾</span></button>
+        <div class="filter-dropdown" id="dropGenero">
+          <label><input type="checkbox" value="accion"> Acción / FPS</label>
+          <label><input type="checkbox" value="rpg"> RPG</label>
+          <label><input type="checkbox" value="horror"> Horror</label>
+          <label><input type="checkbox" value="peleas"> Peleas</label>
+          <label><input type="checkbox" value="sandbox"> Sandbox</label>
+          <label><input type="checkbox" value="battle-royale"> Battle Royale</label>
+          <label><input type="checkbox" value="aventura"> Aventura</label>
+          <label><input type="checkbox" value="survival"> Survival</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-toggle" data-target="dropPlataforma">🖥️ Plataforma <span class="filter-arrow">▾</span></button>
+        <div class="filter-dropdown" id="dropPlataforma">
+          <label><input type="checkbox" value="pc"> PC</label>
+          <label><input type="checkbox" value="ps5"> PS5</label>
+          <label><input type="checkbox" value="xbox"> Xbox</label>
+          <label><input type="checkbox" value="movil"> Móvil</label>
+          <label><input type="checkbox" value="switch"> Switch</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-toggle" data-target="dropBadge">🏷️ Etiqueta <span class="filter-arrow">▾</span></button>
+        <div class="filter-dropdown" id="dropBadge">
+          <label><input type="checkbox" value="new"> New</label>
+          <label><input type="checkbox" value="top"> Top</label>
+          <label><input type="checkbox" value="hot"> Hot</label>
+          <label><input type="checkbox" value="clasico"> Clásico</label>
+          <label><input type="checkbox" value="remake"> Remake</label>
+          <label><input type="checkbox" value="goty"> GOTY</label>
+          <label><input type="checkbox" value="free"> Free</label>
+          <label><input type="checkbox" value="oferta"> Oferta</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-toggle" data-target="dropPrecio">💲 Precio <span class="filter-arrow">▾</span></button>
+        <div class="filter-dropdown" id="dropPrecio">
+          <label><input type="radio" name="precio" value="" checked> Todos</label>
+          <label><input type="radio" name="precio" value="asc"> Menor a mayor</label>
+          <label><input type="radio" name="precio" value="desc"> Mayor a menor</label>
+          <label><input type="radio" name="precio" value="free"> Solo gratis</label>
+          <label><input type="radio" name="precio" value="under20"> Menos de $20</label>
+          <label><input type="radio" name="precio" value="under50"> Menos de $50</label>
+        </div>
+      </div>
+
+      <button class="filter-reset" id="filterReset">✕ Limpiar</button>
+      <span class="filter-count" id="filterCount">22 juegos</span>
+    </div>
+
+    <!-- GRID -->
+    <div class="games-grid" id="gamesGrid">
+
+      <article class="game-card" data-genero="peleas" data-plataforma="pc xbox" data-badge="clasico" data-precio="29.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=budokai'">
+          <img src="media/juegos/budokaitenkaichi3.jpg" alt="Budokai Tenkaichi 3" />
+          <span class="card-badge green">CLÁSICO</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Peleas / Anime</span>
+          <h3>Budokai Tenkaichi 3</h3>
+          <p>El juego de peleas de Dragon Ball más completo. +170 personajes y combate aéreo épico.</p>
+          <div class="card-footer">
+            <span class="card-price">$29.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Budokai Tenkaichi 3" data-price="29.99" data-img="media/juegos/budokaitenkaichi3.jpg">+ Carrito</button>
+              <a href="detalles.html?game=budokai" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card featured" data-genero="accion" data-plataforma="pc ps5 xbox" data-badge="top" data-precio="59.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=cod'">
+          <img src="media/juegos/cod.jpg" alt="Call of Duty" />
+          <span class="card-badge">TOP</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Acción / FPS</span>
+          <h3>Call of Duty</h3>
+          <p>El shooter táctico más intenso. Combate en múltiples frentes con armamento de élite.</p>
+          <div class="card-footer">
+            <span class="card-price">$59.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Call of Duty" data-price="59.99" data-img="media/juegos/cod.jpg">+ Carrito</button>
+              <a href="detalles.html?game=cod" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="rpg" data-plataforma="pc ps5 xbox" data-badge="hot" data-precio="39.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=cyberpunk'">
+          <img src="media/juegos/cyberpunk.jpg" alt="Cyberpunk 2077" />
+          <span class="card-badge neon">HOT</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">RPG / Sci-Fi</span>
+          <h3>Cyberpunk 2077</h3>
+          <p>Sumérgete en Night City, una megalópolis de poder y modificaciones corporales extremas.</p>
+          <div class="card-footer">
+            <span class="card-price">$39.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Cyberpunk 2077" data-price="39.99" data-img="media/juegos/cyberpunk.jpg">+ Carrito</button>
+              <a href="detalles.html?game=cyberpunk" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="horror survival" data-plataforma="pc ps5 xbox movil" data-badge="free" data-precio="19.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=dbd'">
+          <img src="media/juegos/deadbydaylight.jpg" alt="Dead by Daylight" />
+          <span class="card-badge">TERROR</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Survival Horror / Online</span>
+          <h3>Dead by Daylight</h3>
+          <p>4 supervivientes vs 1 asesino. Escapa o caza en el juego de terror asimétrico definitivo.</p>
+          <div class="card-footer">
+            <span class="card-price">$19.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Dead by Daylight" data-price="19.99" data-img="media/juegos/deadbydaylight.jpg">+ Carrito</button>
+              <a href="detalles.html?game=dbd" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="accion" data-plataforma="pc xbox" data-badge="clasico" data-precio="29.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=dmc'">
+          <img src="media/juegos/devilmaycry.jpg" alt="Devil May Cry" />
+          <span class="card-badge neon">ESTILO</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Acción / Hack & Slash</span>
+          <h3>Devil May Cry</h3>
+          <p>Dante en su lucha más estilizada contra las fuerzas del inframundo. Combate y clase a partes iguales.</p>
+          <div class="card-footer">
+            <span class="card-price">$29.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Devil May Cry" data-price="29.99" data-img="media/juegos/devilmaycry.jpg">+ Carrito</button>
+              <a href="detalles.html?game=dmc" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="accion" data-plataforma="pc ps5 xbox" data-badge="hot" data-precio="39.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=dmc5'">
+          <img src="media/juegos/devilmaycry5.jpg" alt="Devil May Cry 5" />
+          <span class="card-badge neon">HOT</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Acción / Hack & Slash</span>
+          <h3>Devil May Cry 5</h3>
+          <p>La entrega más espectacular de la saga. Tres cazadores, un demonio sin igual y estilo al máximo.</p>
+          <div class="card-footer">
+            <span class="card-price">$39.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Devil May Cry 5" data-price="39.99" data-img="media/juegos/devilmaycry5.jpg">+ Carrito</button>
+              <a href="detalles.html?game=dmc5" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="peleas rpg" data-plataforma="pc ps5 xbox" data-badge="hot" data-precio="24.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=xenoverse'">
+          <img src="media/juegos/dragonballxenoverse.jpg" alt="Dragon Ball Xenoverse" />
+          <span class="card-badge" style="background:#f5a623;color:#000">ANIME</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Peleas / RPG / Anime</span>
+          <h3>Dragon Ball Xenoverse</h3>
+          <p>Crea tu propio guerrero y viaja en el tiempo para salvar la historia del universo Dragon Ball.</p>
+          <div class="card-footer">
+            <span class="card-price">$24.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Dragon Ball Xenoverse" data-price="24.99" data-img="media/juegos/dragonballxenoverse.jpg">+ Carrito</button>
+              <a href="detalles.html?game=xenoverse" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="rpg" data-plataforma="pc ps5 xbox" data-badge="top" data-precio="54.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=elden'">
+          <img src="media/juegos/elden.jpg" alt="Elden Ring" />
+          <span class="card-badge" style="background:#c9a227;color:#000">LEGENDARIO</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Souls-like / RPG</span>
+          <h3>Elden Ring</h3>
+          <p>Forja tu leyenda en las Tierras Intermedias. El soulslike definitivo de FromSoftware y G.R.R. Martin.</p>
+          <div class="card-footer">
+            <span class="card-price">$54.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Elden Ring" data-price="54.99" data-img="media/juegos/elden.jpg">+ Carrito</button>
+              <a href="detalles.html?game=elden" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="battle-royale" data-plataforma="pc ps5 xbox movil" data-badge="free" data-precio="0">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=fortnite'">
+          <img src="media/juegos/fortnite.jpg" alt="Fortnite" />
+          <span class="card-badge neon">FREE</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Battle Royale</span>
+          <h3>Fortnite</h3>
+          <p>El battle royale más popular del mundo. Construye, dispara y sé el último en pie cada temporada.</p>
+          <div class="card-footer">
+            <span class="card-price free">GRATIS</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Fortnite V-Bucks x1000" data-price="9.99" data-img="media/juegos/fortnite.jpg">+ V-Bucks</button>
+              <a href="detalles.html?game=fortnite" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="accion aventura" data-plataforma="ps5 xbox" data-badge="new" data-precio="69.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=gta'">
+          <img src="media/juegos/gta.jpg" alt="GTA VI" />
+          <span class="card-badge">PRE-VENTA</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Mundo Abierto / Acción</span>
+          <h3>GTA VI</h3>
+          <p>El regreso a Vice City más esperado. Mundo abierto masivo, historia dual y caos sin límites.</p>
+          <div class="card-footer">
+            <span class="card-price">$69.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="GTA VI" data-price="69.99" data-img="media/juegos/gta.jpg">+ Carrito</button>
+              <a href="detalles.html?game=gta" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="accion" data-plataforma="pc xbox" data-badge="new" data-precio="49.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=halo'">
+          <img src="media/juegos/Halo_Infinite.jpg" alt="Halo Infinite" />
+          <span class="card-badge neon">NEW</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Acción / FPS</span>
+          <h3>Halo Infinite</h3>
+          <p>El Jefe Maestro regresa en la entrega más épica de la saga. Campaña y multijugador gratuito.</p>
+          <div class="card-footer">
+            <span class="card-price">$49.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Halo Infinite" data-price="49.99" data-img="media/juegos/Halo_Infinite.jpg">+ Carrito</button>
+              <a href="detalles.html?game=halo" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="survival accion" data-plataforma="pc xbox" data-badge="clasico" data-precio="9.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=l4d2'">
+          <img src="media/juegos/left4dead2.jpg" alt="Left 4 Dead 2" />
+          <span class="card-badge">CO-OP</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Survival / FPS Cooperativo</span>
+          <h3>Left 4 Dead 2</h3>
+          <p>4 supervivientes contra hordas de infectados. El cooperativo de zombies más intenso jamás hecho.</p>
+          <div class="card-footer">
+            <span class="card-price">$9.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Left 4 Dead 2" data-price="9.99" data-img="media/juegos/left4dead2.jpg">+ Carrito</button>
+              <a href="detalles.html?game=l4d2" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="peleas" data-plataforma="pc xbox" data-badge="clasico" data-precio="29.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=mvc'">
+          <img src="media/juegos/marvelvscapcom.jpg" alt="Marvel vs Capcom" />
+          <span class="card-badge" style="background:#e63946;color:#fff">VERSUS</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Peleas / Crossover</span>
+          <h3>Marvel vs Capcom</h3>
+          <p>Los héroes de Marvel y los iconos de Capcom frente a frente en el crossover definitivo.</p>
+          <div class="card-footer">
+            <span class="card-price">$29.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Marvel vs Capcom" data-price="29.99" data-img="media/juegos/marvelvscapcom.jpg">+ Carrito</button>
+              <a href="detalles.html?game=mvc" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="sandbox aventura" data-plataforma="pc ps5 xbox movil switch" data-badge="clasico" data-precio="29.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=minecraft'">
+          <img src="media/juegos/minecraft.jpg" alt="Minecraft" />
+          <span class="card-badge green">CLÁSICO</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Sandbox / Aventura</span>
+          <h3>Minecraft</h3>
+          <p>Construye, explora y sobrevive en un mundo infinito generado por bloques interminables.</p>
+          <div class="card-footer">
+            <span class="card-price">$29.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Minecraft" data-price="29.99" data-img="media/juegos/minecraft.jpg">+ Carrito</button>
+              <a href="detalles.html?game=minecraft" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="aventura" data-plataforma="pc ps5 xbox" data-badge="oferta" data-precio="29.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=rdr2'">
+          <img src="media/juegos/read.jpg" alt="Red Dead Redemption 2" />
+          <span class="card-badge green">OFERTA</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Western / Aventura</span>
+          <h3>Red Dead Redemption 2</h3>
+          <p>La historia de Arthur Morgan en el ocaso del viejo oeste. Narrativa cinematográfica sin igual.</p>
+          <div class="card-footer">
+            <span class="card-price">$29.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Red Dead Redemption 2" data-price="29.99" data-img="media/juegos/read.jpg">+ Carrito</button>
+              <a href="detalles.html?game=rdr2" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="horror" data-plataforma="pc ps5 xbox" data-badge="new" data-precio="69.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=rerequiem'">
+          <img src="media/juegos/resident-evil-requiem.jpg" alt="Resident Evil Requiem" />
+          <span class="card-badge">NEW</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Survival Horror</span>
+          <h3>Resident Evil: Requiem</h3>
+          <p>La nueva pesadilla de la saga más icónica del survival horror. Terror en estado puro.</p>
+          <div class="card-footer">
+            <span class="card-price">$69.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Resident Evil: Requiem" data-price="69.99" data-img="media/juegos/resident-evil-requiem.jpg">+ Carrito</button>
+              <a href="detalles.html?game=rerequiem" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="horror" data-plataforma="pc ps5 xbox" data-badge="remake" data-precio="39.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=re2'">
+          <img src="media/juegos/residentevil2.jpg" alt="Resident Evil 2" />
+          <span class="card-badge green">REMAKE</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Survival Horror</span>
+          <h3>Resident Evil 2</h3>
+          <p>El remake definitivo del clásico. Leon y Claire atrapados en Raccoon City con el implacable Mr. X.</p>
+          <div class="card-footer">
+            <span class="card-price">$39.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Resident Evil 2 Remake" data-price="39.99" data-img="media/juegos/residentevil2.jpg">+ Carrito</button>
+              <a href="detalles.html?game=re2" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="horror" data-plataforma="pc ps5 xbox" data-badge="remake" data-precio="34.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=re3'">
+          <img src="media/juegos/residentevil3.jpg" alt="Resident Evil 3" />
+          <span class="card-badge green">REMAKE</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Survival Horror</span>
+          <h3>Resident Evil 3</h3>
+          <p>Jill Valentine huye de Nemesis en las calles de Raccoon City. Pánico, adrenalina y horror puro.</p>
+          <div class="card-footer">
+            <span class="card-price">$34.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Resident Evil 3 Remake" data-price="34.99" data-img="media/juegos/residentevil3.jpg">+ Carrito</button>
+              <a href="detalles.html?game=re3" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="sandbox" data-plataforma="pc ps5 xbox movil" data-badge="free" data-precio="0">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=roblox'">
+          <img src="media/juegos/roblox.jpg" alt="Roblox" />
+          <span class="card-badge neon">FREE</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Plataforma / Sandbox</span>
+          <h3>Roblox</h3>
+          <p>Miles de juegos creados por usuarios en una sola plataforma. Crea, juega y comparte sin límites.</p>
+          <div class="card-footer">
+            <span class="card-price free">GRATIS</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Roblox Robux x1000" data-price="9.99" data-img="media/juegos/roblox.jpg">+ Robux</button>
+              <a href="detalles.html?game=roblox" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="horror" data-plataforma="pc ps5" data-badge="remake" data-precio="59.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=sh2'">
+          <img src="media/juegos/silenthill2.jpg" alt="Silent Hill 2" />
+          <span class="card-badge green">REMAKE</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Survival Horror / Psicológico</span>
+          <h3>Silent Hill 2</h3>
+          <p>El remake del horror psicológico más perturbador de la historia. James regresa a la niebla.</p>
+          <div class="card-footer">
+            <span class="card-price">$59.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Silent Hill 2 Remake" data-price="59.99" data-img="media/juegos/silenthill2.jpg">+ Carrito</button>
+              <a href="detalles.html?game=sh2" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="horror" data-plataforma="pc ps5 xbox" data-badge="new" data-precio="59.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=shf'">
+          <img src="media/juegos/silenthillf.jpg" alt="Silent Hill f" />
+          <span class="card-badge">NEW</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Survival Horror / Psicológico</span>
+          <h3>Silent Hill f</h3>
+          <p>La nueva pesadilla ambientada en el Japón de los 60. Terror floral y oscuridad sin igual.</p>
+          <div class="card-footer">
+            <span class="card-price">$59.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="Silent Hill f" data-price="59.99" data-img="media/juegos/silenthillf.jpg">+ Carrito</button>
+              <a href="detalles.html?game=shf" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="survival sandbox" data-plataforma="pc ps5" data-badge="oferta" data-precio="14.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=theforest'">
+          <img src="media/juegos/theforest.jpg" alt="The Forest" />
+          <span class="card-badge" style="background:#2d6a4f;color:#fff">SURVIVAL</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">Survival Horror / Sandbox</span>
+          <h3>The Forest</h3>
+          <p>Sobrevive en un bosque habitado por caníbales. Construye, caza y descubre sus secretos.</p>
+          <div class="card-footer">
+            <span class="card-price">$14.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="The Forest" data-price="14.99" data-img="media/juegos/theforest.jpg">+ Carrito</button>
+              <a href="detalles.html?game=theforest" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card" data-genero="rpg aventura" data-plataforma="pc ps5 xbox switch" data-badge="goty" data-precio="19.99">
+        <div class="card-img-wrap" onclick="window.location='detalles.html?game=witcher'">
+          <img src="media/juegos/thewitcher3.jpg" alt="The Witcher 3" />
+          <span class="card-badge green">GOTY</span>
+        </div>
+        <div class="card-body">
+          <span class="card-genre">RPG / Fantasía</span>
+          <h3>The Witcher 3</h3>
+          <p>Geralt de Rivia en la aventura RPG más aclamada de la historia. +200 horas de contenido.</p>
+          <div class="card-footer">
+            <span class="card-price">$19.99</span>
+            <div class="card-actions">
+              <button class="add-cart-btn" data-name="The Witcher 3" data-price="19.99" data-img="media/juegos/thewitcher3.jpg">+ Carrito</button>
+              <a href="detalles.html?game=witcher" class="card-btn">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Sin resultados -->
+    <div class="no-results" id="noResults" style="display:none">
+      <p>😔 No hay juegos que coincidan con los filtros seleccionados.</p>
+      <button class="btn-ghost" onclick="document.getElementById('filterReset').click()">Limpiar filtros</button>
+    </div>
+
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-section" id="video">
+    <div class="section-header">
+      <span class="section-tag">// MULTIMEDIA</span>
+      <h2>TRAILER <span>OFICIAL</span></h2>
+    </div>
+    <div class="video-wrap">
+      <video controls poster="media/juegos/banner.jpg">
+        <source src="media/videos/video.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
+      <div class="video-glow"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">⬡ NEXUS<span>GAMES</span></div>
+      <p>© 2025 NexusGames — Todos los derechos reservados</p>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="detalles.html">Detalles</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

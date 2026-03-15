@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JUEGOS — Destacados</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/destacados.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="page-destacados">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">⬡ NEXUS<span>GAMES</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#catalogo">Catálogo</a></li>
+      <li><a href="destacados.html" class="active">Destacados</a></li>
+      <li><a href="detalles.html">Detalles</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location='index.html'">Explorar</button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="dest-hero">
+    <div class="dest-hero-bg">
+      <img src="media/juegos/banner.jpg" alt="Banner" />
+      <div class="hero-overlay thick"></div>
+    </div>
+    <div class="dest-hero-content">
+      <p class="hero-label">// SECCIÓN ESPECIAL</p>
+      <h1 class="hero-title">DESTA<br/><span>CADOS</span></h1>
+      <p class="hero-sub">Novedades, trailers, rankings y recomendaciones del momento.</p>
+    </div>
+  </section>
+
+  <!-- NAV INTERNA -->
+  <nav class="dest-subnav">
+    <a href="#novedades">🆕 Novedades</a>
+    <a href="#trailers">🎬 Trailers</a>
+    <a href="#calificaciones">⭐ Calificaciones</a>
+    <a href="#top5">🏆 Top 5</a>
+    <a href="#recomendados">💡 Recomendados</a>
+  </nav>
+
+  <!-- ===== NOVEDADES ===== -->
+  <section class="dest-section" id="novedades">
+    <div class="section-header">
+      <span class="section-tag">// RECIÉN LLEGADOS</span>
+      <h2>NOVE<span>DADES</span></h2>
+      <p>Los títulos más recientes que acaban de aterrizar</p>
+    </div>
+    <div class="news-grid">
+
+      <article class="news-card big" onclick="window.location='detalles.html?game=rerequiem'">
+        <img src="media/juegos/resident-evil-requiem.jpg" alt="RE Requiem" />
+        <div class="news-overlay">
+          <span class="news-badge">🆕 NUEVO 2025</span>
+          <h3>Resident Evil: Requiem</h3>
+          <p>La nueva pesadilla de Capcom. Terror en estado puro con tecnología de última generación.</p>
+          <span class="news-link">Ver detalles →</span>
+        </div>
+      </article>
+
+      <article class="news-card" onclick="window.location='detalles.html?game=shf'">
+        <img src="media/juegos/silenthillf.jpg" alt="Silent Hill f" />
+        <div class="news-overlay">
+          <span class="news-badge">🆕 NUEVO 2025</span>
+          <h3>Silent Hill f</h3>
+          <p>Terror floral en el Japón de los 60. Una nueva era para la saga.</p>
+          <span class="news-link">Ver detalles →</span>
+        </div>
+      </article>
+
+      <article class="news-card" onclick="window.location='detalles.html?game=gta'">
+        <img src="media/juegos/gta.jpg" alt="GTA VI" />
+        <div class="news-overlay">
+          <span class="news-badge">⏳ PRE-VENTA</span>
+          <h3>GTA VI</h3>
+          <p>El regreso a Vice City más esperado. Pre-venta disponible ahora.</p>
+          <span class="news-link">Ver detalles →</span>
+        </div>
+      </article>
+
+      <article class="news-card" onclick="window.location='detalles.html?game=sh2'">
+        <img src="media/juegos/silenthill2.jpg" alt="Silent Hill 2" />
+        <div class="news-overlay">
+          <span class="news-badge">🔄 REMAKE</span>
+          <h3>Silent Hill 2 Remake</h3>
+          <p>El clásico renace con Unreal Engine 5. James regresa a la niebla.</p>
+          <span class="news-link">Ver detalles →</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== TRAILERS ===== -->
+  <section class="dest-section dark" id="trailers">
+    <div class="section-header">
+      <span class="section-tag">// MULTIMEDIA</span>
+      <h2>TRA<span>ILERS</span></h2>
+      <p>Los mejores tráilers de los juegos de tu colección</p>
+    </div>
+
+    <div class="trailers-grid">
+
+      <div class="trailer-card active" data-video="media/videos/Budokai Tenkaichi 3.mp4" data-title="Dragon Ball Budokai Tenkaichi 3" data-img="media/juegos/budokaitenkaichi3.jpg">
+        <img src="media/juegos/budokaitenkaichi3.jpg" alt="Budokai Tenkaichi 3" />
+        <div class="trailer-info">
+          <span class="trailer-tag">Peleas / Anime</span>
+          <h4>Budokai Tenkaichi 3</h4>
+        </div>
+        <div class="trailer-play">▶</div>
+      </div>
+
+      <div class="trailer-card" data-video="media/videos/Devil May Cry 5.mp4" data-title="Devil May Cry 5" data-img="media/juegos/devilmaycry5.jpg">
+        <img src="media/juegos/devilmaycry5.jpg" alt="Devil May Cry 5" />
+        <div class="trailer-info">
+          <span class="trailer-tag">Acción / Hack & Slash</span>
+          <h4>Devil May Cry 5</h4>
+        </div>
+        <div class="trailer-play">▶</div>
+      </div>
+
+      <div class="trailer-card" data-video="media/videos/DmC.mp4" data-title="Devil May Cry" data-img="media/juegos/devilmaycry.jpg">
+        <img src="media/juegos/devilmaycry.jpg" alt="Devil May Cry" />
+        <div class="trailer-info">
+          <span class="trailer-tag">Acción / Hack & Slash</span>
+          <h4>Devil May Cry</h4>
+        </div>
+        <div class="trailer-play">▶</div>
+      </div>
+
+      <div class="trailer-card" data-video="media/videos/Halo Infinite.mp4" data-title="Halo Infinite" data-img="media/juegos/Halo_Infinite.jpg">
+        <img src="media/juegos/Halo_Infinite.jpg" alt="Halo Infinite" />
+        <div class="trailer-info">
+          <span class="trailer-tag">Acción / FPS</span>
+          <h4>Halo Infinite</h4>
+        </div>
+        <div class="trailer-play">▶</div>
+      </div>
+
+      <div class="trailer-card" data-video="media/videos/Left 4 Dead 2.mp4" data-title="Left 4 Dead 2" data-img="media/juegos/left4dead2.jpg">
+        <img src="media/juegos/left4dead2.jpg" alt="Left 4 Dead 2" />
+        <div class="trailer-info">
+          <span class="trailer-tag">Survival / Co-op</span>
+          <h4>Left 4 Dead 2</h4>
+        </div>
+        <div class="trailer-play">▶</div>
+      </div>
+
+    </div>
+
+    <!-- REPRODUCTOR PRINCIPAL -->
+    <div class="trailer-player" id="trailerPlayer">
+      <div class="player-header">
+        <span id="playerTitle">Selecciona un tráiler</span>
+        <button class="player-close" id="playerClose">✕</button>
+      </div>
+      <video id="mainVideo" controls>
+        <source id="mainVideoSrc" src="" type="video/mp4" />
+      </video>
+    </div>
+
+  </section>
+
+  <!-- ===== CALIFICACIONES ===== -->
+  <section class="dest-section" id="calificaciones">
+    <div class="section-header">
+      <span class="section-tag">// PUNTUACIONES</span>
+      <h2>CALIFI<span>CACIONES</span></h2>
+      <p>Los mejores juegos según su puntuación general</p>
+    </div>
+
+    <div class="ratings-list">
+
+      <div class="rating-row" onclick="window.location='detalles.html?game=witcher'">
+        <img src="media/juegos/thewitcher3.jpg" alt="The Witcher 3" />
+        <div class="rating-info">
+          <span class="rating-genre">RPG / Fantasía</span>
+          <h4>The Witcher 3</h4>
+          <p>La obra maestra del RPG de mundo abierto. Más de 200 horas de contenido épico.</p>
+        </div>
+        <div class="rating-score">
+          <div class="score-circle" style="--pct:98%">
+            <span>9.8</span>
+          </div>
+          <div class="score-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="rating-row" onclick="window.location='detalles.html?game=rdr2'">
+        <img src="media/juegos/read.jpg" alt="Red Dead 2" />
+        <div class="rating-info">
+          <span class="rating-genre">Western / Aventura</span>
+          <h4>Red Dead Redemption 2</h4>
+          <p>Narrativa cinematográfica sin igual en el ocaso del viejo oeste.</p>
+        </div>
+        <div class="rating-score">
+          <div class="score-circle" style="--pct:97%">
+            <span>9.7</span>
+          </div>
+          <div class="score-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="rating-row" onclick="window.location='detalles.html?game=elden'">
+        <img src="media/juegos/elden.jpg" alt="Elden Ring" />
+        <div class="rating-info">
+          <span class="rating-genre">Souls-like / RPG</span>
+          <h4>Elden Ring</h4>
+          <p>El soulslike definitivo creado junto a G.R.R. Martin.</p>
+        </div>
+        <div class="rating-score">
+          <div class="score-circle" style="--pct:96%">
+            <span>9.6</span>
+          </div>
+          <div class="score-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="rating-row" onclick="window.location='detalles.html?game=minecraft'">
+        <img src="media/juegos/minecraft.jpg" alt="Minecraft" />
+        <div class="rating-info">
+          <span class="rating-genre">Sandbox / Aventura</span>
+          <h4>Minecraft</h4>
+          <p>El juego más vendido de la historia. Creatividad sin límites.</p>
+        </div>
+        <div class="rating-score">
+          <div class="score-circle" style="--pct:95%">
+            <span>9.5</span>
+          </div>
+          <div class="score-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="rating-row" onclick="window.location='detalles.html?game=re2'">
+        <img src="media/juegos/residentevil2.jpg" alt="Resident Evil 2" />
+        <div class="rating-info">
+          <span class="rating-genre">Survival Horror</span>
+          <h4>Resident Evil 2 Remake</h4>
+          <p>Uno de los mejores remakes de la historia del videojuego.</p>
+        </div>
+        <div class="rating-score">
+          <div class="score-circle" style="--pct:94%">
+            <span>9.4</span>
+          </div>
+          <div class="score-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="rating-row" onclick="window.location='detalles.html?game=dmc5'">
+        <img src="media/juegos/devilmaycry5.jpg" alt="Devil May Cry 5" />
+        <div class="rating-info">
+          <span class="rating-genre">Acción / Hack & Slash</span>
+          <h4>Devil May Cry 5</h4>
+          <p>El hack & slash más espectacular y estilizado jamás creado.</p>
+        </div>
+        <div class="rating-score">
+          <div class="score-circle" style="--pct:91%">
+            <span>9.1</span>
+          </div>
+          <div class="score-stars">★★★★½</div>
+        </div>
+      </div>
+
+      <div class="rating-row" onclick="window.location='detalles.html?game=cod'">
+        <img src="media/juegos/cod.jpg" alt="Call of Duty" />
+        <div class="rating-info">
+          <span class="rating-genre">Acción / FPS</span>
+          <h4>Call of Duty</h4>
+          <p>La saga de shooters más vendida de la historia.</p>
+        </div>
+        <div class="rating-score">
+          <div class="score-circle" style="--pct:92%">
+            <span>9.2</span>
+          </div>
+          <div class="score-stars">★★★★½</div>
+        </div>
+      </div>
+
+      <div class="rating-row" onclick="window.location='detalles.html?game=sh2'">
+        <img src="media/juegos/silenthill2.jpg" alt="Silent Hill 2" />
+        <div class="rating-info">
+          <span class="rating-genre">Horror Psicológico</span>
+          <h4>Silent Hill 2 Remake</h4>
+          <p>El remake del horror psicológico más perturbador de la historia.</p>
+        </div>
+        <div class="rating-score">
+          <div class="score-circle" style="--pct:90%">
+            <span>9.0</span>
+          </div>
+          <div class="score-stars">★★★★½</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TOP 5 MÁS VENDIDOS ===== -->
+  <section class="dest-section dark" id="top5">
+    <div class="section-header">
+      <span class="section-tag">// RANKING</span>
+      <h2>TOP 5 MÁS <span>VENDIDOS</span></h2>
+      <p>Los títulos que más unidades han movido esta temporada</p>
+    </div>
+
+    <div class="top5-list">
+
+      <div class="top5-item" onclick="window.location='detalles.html?game=dmc5'">
+        <div class="top5-rank">
+          <span class="rank-num">01</span>
+          <span class="rank-crown">👑</span>
+        </div>
+        <div class="top5-img-wrap">
+          <img src="media/juegos/devilmaycry5.jpg" alt="Devil May Cry 5" />
+        </div>
+        <div class="top5-info">
+          <span class="top5-genre">Acción / Hack & Slash</span>
+          <h3>Devil May Cry 5</h3>
+          <p>El favorito absoluto de los fans. Estilo, combate y espectáculo en su máxima expresión.</p>
+          <div class="top5-stats">
+            <span>💰 $39.99</span>
+            <span>⭐ 9.1/10</span>
+            <span>🎮 PC · PS5 · Xbox</span>
+          </div>
+        </div>
+        <div class="top5-bar">
+          <div class="top5-progress" style="--w:100%"></div>
+          <span>100%</span>
+        </div>
+      </div>
+
+      <div class="top5-item" onclick="window.location='detalles.html?game=l4d2'">
+        <div class="top5-rank">
+          <span class="rank-num">02</span>
+        </div>
+        <div class="top5-img-wrap">
+          <img src="media/juegos/left4dead2.jpg" alt="Left 4 Dead 2" />
+        </div>
+        <div class="top5-info">
+          <span class="top5-genre">Survival / Co-op</span>
+          <h3>Left 4 Dead 2</h3>
+          <p>El cooperativo de zombies más jugado de todos los tiempos. Sigue dominando las ventas.</p>
+          <div class="top5-stats">
+            <span>💰 $9.99</span>
+            <span>⭐ 9.0/10</span>
+            <span>🎮 PC · Xbox</span>
+          </div>
+        </div>
+        <div class="top5-bar">
+          <div class="top5-progress" style="--w:87%"></div>
+          <span>87%</span>
+        </div>
+      </div>
+
+      <div class="top5-item" onclick="window.location='detalles.html?game=cod'">
+        <div class="top5-rank">
+          <span class="rank-num">03</span>
+        </div>
+        <div class="top5-img-wrap">
+          <img src="media/juegos/cod.jpg" alt="Call of Duty" />
+        </div>
+        <div class="top5-info">
+          <span class="top5-genre">Acción / FPS</span>
+          <h3>Call of Duty</h3>
+          <p>La saga más vendida del género FPS. Millones de jugadores activos cada temporada.</p>
+          <div class="top5-stats">
+            <span>💰 $59.99</span>
+            <span>⭐ 9.2/10</span>
+            <span>🎮 PC · PS5 · Xbox</span>
+          </div>
+        </div>
+        <div class="top5-bar">
+          <div class="top5-progress" style="--w:78%"></div>
+          <span>78%</span>
+        </div>
+      </div>
+
+      <div class="top5-item" onclick="window.location='detalles.html?game=halo'">
+        <div class="top5-rank">
+          <span class="rank-num">04</span>
+        </div>
+        <div class="top5-img-wrap">
+          <img src="media/juegos/Halo_Infinite.jpg" alt="Halo Infinite" />
+        </div>
+        <div class="top5-info">
+          <span class="top5-genre">Acción / FPS</span>
+          <h3>Halo Infinite</h3>
+          <p>El Jefe Maestro sigue siendo uno de los shooters más queridos del mercado.</p>
+          <div class="top5-stats">
+            <span>💰 $49.99</span>
+            <span>⭐ 8.5/10</span>
+            <span>🎮 PC · Xbox</span>
+          </div>
+        </div>
+        <div class="top5-bar">
+          <div class="top5-progress" style="--w:65%"></div>
+          <span>65%</span>
+        </div>
+      </div>
+
+      <div class="top5-item" onclick="window.location='detalles.html?game=minecraft'">
+        <div class="top5-rank">
+          <span class="rank-num">05</span>
+        </div>
+        <div class="top5-img-wrap">
+          <img src="media/juegos/minecraft.jpg" alt="Minecraft" />
+        </div>
+        <div class="top5-info">
+          <span class="top5-genre">Sandbox / Aventura</span>
+          <h3>Minecraft</h3>
+          <p>El juego más vendido de la historia sigue creciendo con cada nueva actualización.</p>
+          <div class="top5-stats">
+            <span>💰 $29.99</span>
+            <span>⭐ 9.5/10</span>
+            <span>🎮 PC · PS5 · Xbox · Móvil</span>
+          </div>
+        </div>
+        <div class="top5-bar">
+          <div class="top5-progress" style="--w:58%"></div>
+          <span>58%</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== RECOMENDADOS ===== -->
+  <section class="dest-section" id="recomendados">
+    <div class="section-header">
+      <span class="section-tag">// SELECCIÓN ESPECIAL</span>
+      <h2>JUEGOS RECO<span>MENDADOS</span></h2>
+      <p>Nuestra selección curada de experiencias imprescindibles</p>
+    </div>
+
+    <div class="reco-grid">
+
+      <div class="reco-card" onclick="window.location='detalles.html?game=minecraft'">
+        <div class="reco-img">
+          <img src="media/juegos/minecraft.jpg" alt="Minecraft" />
+          <div class="reco-tag">💡 RECOMENDADO</div>
+        </div>
+        <div class="reco-body">
+          <span class="reco-why">Para todos los públicos</span>
+          <h4>Minecraft</h4>
+          <p>Da igual si tienes 8 o 40 años. La creatividad y la aventura no tienen límites en Minecraft.</p>
+          <div class="reco-meta">
+            <span class="reco-score">9.5 ★</span>
+            <a href="detalles.html?game=minecraft" class="reco-btn">Ver →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reco-card" onclick="window.location='detalles.html?game=rdr2'">
+        <div class="reco-img">
+          <img src="media/juegos/read.jpg" alt="Red Dead 2" />
+          <div class="reco-tag">🎬 IMPRESCINDIBLE</div>
+        </div>
+        <div class="reco-body">
+          <span class="reco-why">Para amantes de las historias</span>
+          <h4>Red Dead Redemption 2</h4>
+          <p>Si te gustan las narrativas cinematográficas, este juego es una obra de arte obligatoria.</p>
+          <div class="reco-meta">
+            <span class="reco-score">9.7 ★</span>
+            <a href="detalles.html?game=rdr2" class="reco-btn">Ver →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reco-card" onclick="window.location='detalles.html?game=theforest'">
+        <div class="reco-img">
+          <img src="media/juegos/theforest.jpg" alt="The Forest" />
+          <div class="reco-tag">👥 MEJOR EN CO-OP</div>
+        </div>
+        <div class="reco-body">
+          <span class="reco-why">Para jugar con amigos</span>
+          <h4>The Forest</h4>
+          <p>El survival más divertido en cooperativo. Construir, explorar y sobrevivir juntos es adictivo.</p>
+          <div class="reco-meta">
+            <span class="reco-score">8.5 ★</span>
+            <a href="detalles.html?game=theforest" class="reco-btn">Ver →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reco-card" onclick="window.location='detalles.html?game=re2'">
+        <div class="reco-img">
+          <img src="media/juegos/residentevil2.jpg" alt="Resident Evil 2" />
+          <div class="reco-tag">😱 MEJOR TERROR</div>
+        </div>
+        <div class="reco-body">
+          <span class="reco-why">Para los fans del horror</span>
+          <h4>Resident Evil 2 Remake</h4>
+          <p>El mejor survival horror moderno. Mr. X no te dejará en paz y tú no podrás soltar el mando.</p>
+          <div class="reco-meta">
+            <span class="reco-score">9.4 ★</span>
+            <a href="detalles.html?game=re2" class="reco-btn">Ver →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reco-card" onclick="window.location='detalles.html?game=re3'">
+        <div class="reco-img">
+          <img src="media/juegos/residentevil3.jpg" alt="Resident Evil 3" />
+          <div class="reco-tag">⚡ ACCIÓN Y TERROR</div>
+        </div>
+        <div class="reco-body">
+          <span class="reco-why">Para los que quieren adrenalina</span>
+          <h4>Resident Evil 3 Remake</h4>
+          <p>Más rápido, más intenso. Nemesis no descansa y tú tampoco podrás hacerlo.</p>
+          <div class="reco-meta">
+            <span class="reco-score">8.5 ★</span>
+            <a href="detalles.html?game=re3" class="reco-btn">Ver →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">⬡ NEXUS<span>GAMES</span></div>
+      <p>© 2025 NexusGames — Todos los derechos reservados</p>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="destacados.html">Destacados</a>
+        <a href="detalles.html">Detalles</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/destacados.js"></script>
+</body>
+</html>
